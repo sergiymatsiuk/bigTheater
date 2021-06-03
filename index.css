@@ -24,7 +24,6 @@ li {
     list-style: none;
 }
 
-
 .container {
     width: 90%;
     margin: 0 auto;
@@ -515,6 +514,10 @@ li {
     width: 100%;
     min-height: 100px;
 }
+.form-2 input::placeholder{
+    top: 10px;
+    position: absolute;
+}
 
 
 
@@ -924,11 +927,38 @@ li {
         padding-right: 125px;
     }
     .big-theater-slider {
+        min-width: 0;
         width: 370px;
         height: 570px;
-        background-color: #FFFFFF;
         margin-top: 267px;
         display: flex;
+        position: relative;
+    }
+    .big-theater-slider-container {
+        width: 350px;
+        height: 490px;
+        position: absolute;
+        z-index: 2;
+    }
+    .big-theater-slider-back {
+        width: 350px;
+        height: 490px;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 1;
+    }
+
+    .slider-nav {
+        position: absolute;
+        left: 0;
+        width: 370px;
+        top: 545px;
+        display: flex;
+        justify-content: space-between;
+
+
+
     }
 
     .about-info {

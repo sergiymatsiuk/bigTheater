@@ -17,4 +17,9 @@ const swiper =new Swiper('.partners-logo', {
 
 const bigTheaterSlider =new Swiper('.big-theater-slider-container', {
     loop: true,
+    navigation: {
+        prevEl: '.slider-nav-next',
+        nextEl: '.slider-nav-prev' 
+    },
+    speed: 1000,
 })
