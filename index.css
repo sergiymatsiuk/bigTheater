@@ -6,9 +6,14 @@ body {
     box-sizing: border-box;
     background-color: #333333;
     color: #FFFFFF;
+}
 
+.close {
+    display: none;
+}
 
-    height: 2000px;
+.no-scroll {
+    overflow: hidden;
 }
 
 a {
@@ -22,6 +27,9 @@ ul {
 }
 li {
     list-style: none;
+}
+input::placeholder {
+    color: #989898;
 }
 
 .container {
@@ -44,23 +52,12 @@ li {
     z-index: 2;
 }
 
-.header-left {
-    display: none;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 150px;
-
-    background: rgba(51, 51, 51, 0.75);
-    
-    flex-direction: column;
-    justify-content: flex-end;
-    
-
-    padding-bottom: 85px;
+.youtube {
+    margin-bottom: 80px;
 }
+
+
 .header-info {
     width: 300px;
 
@@ -77,15 +74,6 @@ li {
 
     transform: rotate(-90deg);
 }
-.header-logo {
-    padding-top: 40px;
-    padding-bottom: 85px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-}
 
 .logo-line {
     margin: 40px 0 10px;
@@ -95,10 +83,13 @@ li {
     margin-top: 30px;
 
 }
+a img:hover,
+a img:focus {
+    filter: invert(0.4) sepia(1) saturate(8.3) hue-rotate(360deg) brightness(1.2);
 
-.social-logo a img:hover {
-    background-color: #D1A954;
 }
+
+
 .header-burger {
 
 }
@@ -106,9 +97,90 @@ li {
 }
 .header-main {
 }
+
+.header-container {
+    position: relative;
+}
+
 .header-menu {
     display: none;
 }
+
+
+ .show {
+    display: flex;
+    flex-direction: column-reverse;
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    background: #333333;
+    z-index: 10;
+
+    padding-top: 140px;
+
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+.show ul {
+    padding-left: 39px;
+}
+.show .header-logo {
+    margin: 89px auto 140px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 140px;
+}
+
+.show .social-logo {
+    margin-top: 0;
+    width: 50px;
+    height: 50px;
+}
+.show .vk,
+.show .instagram {
+    padding-right: 40px;
+}
+.show .vk,
+.show .youtube {
+    padding-top: 50px;
+}
+.show .social-logo img {
+    width: 50px;
+    height: 50px;
+    opacity: 100%;
+}
+.show .youtube {
+    margin-bottom: 0px;
+}
+.header-logo .logo-info,
+.header-logo .logo-line {
+    display: none;
+}
+.show li {
+    padding-top: 35px;
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+} 
+
+
+.show-burger .close {
+    display: flex;
+    position: absolute;
+    top: 38px;
+    left: 246px;
+    z-index: 11;
+}
+
+
 .phone {
     font-family: 'Open Sans Condensed';
     font-style: normal;
@@ -190,6 +262,10 @@ li {
 .big-theater-slider {
     min-width: 0;
     display: none;
+}
+.slider-nav-next,
+.slider-nav-prev {
+    cursor: pointer;
 }
 
 
@@ -460,6 +536,8 @@ li {
     text-transform: uppercase;
 }
 
+
+
 .patron-title span {
     color: #D1A954;
 }
@@ -628,9 +706,9 @@ li {
 
 
 
-
-
 @media (max-width:450px) {
+
+    
     .big-theater-title {
         font-size: 50px;
         line-height: 75px;
@@ -781,7 +859,7 @@ li {
     }
 }
 
-@media (min-width:950px){
+@media (min-width:1000px){
     .header-burger {
         display: none;
     }
@@ -820,8 +898,37 @@ li {
 
     .header-menu ul li a:hover{
         color: #D1A954;
-        transition: 0.7s;
+        transition: 0.3s;
     }
+
+
+    .header-logo {
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 150px;
+    
+        background: rgba(51, 51, 51, 0.75);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .header-logo a img{
+        height: 26px;
+        width: 26px;
+
+        opacity: 60%;
+    }
+    .header-logo .logo-info,
+    .header-logo .logo-line {
+        display: flex;
+    }
+
+
     .phone {
         margin: 0 auto;
     }
@@ -872,7 +979,7 @@ li {
     }
 }
 
-@media (min-width:1100px){
+@media (min-width:1150px){
     .container {
         max-width: 850px;
     }
@@ -906,19 +1013,6 @@ li {
     .header-left {
         display: flex;
     }
-
-    /* .partners-logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .logo {
-        display: flex;
-        flex-direction: column;
-    }
-    .logo img {
-        padding-bottom: 80px;
-    } */
     .big-theater .container {
         display: flex;
         flex-direction: row;
@@ -1009,3 +1103,5 @@ li {
     }
 
 }
+
+

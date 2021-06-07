@@ -23,3 +23,24 @@ const bigTheaterSlider =new Swiper('.big-theater-slider-container', {
     },
     speed: 1000,
 })
+
+const openBurger = document.querySelector('.header-burger')
+const mobMenu = document.querySelector('.header-menu')
+
+openBurger.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    mobMenu.classList.toggle('show')
+    openBurger.classList.toggle('show-burger')
+    document.body.classList.toggle('no-scroll')
+})
+
+window.addEventListener('resize', () => {
+
+    if (window.innerWidth > 950 ) {
+        mobMenu.classList.remove('show');
+        openBurger.classList.remove('show-burger');
+        document.body.classList.remove('no-scroll')
+    }
+
+})
