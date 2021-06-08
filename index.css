@@ -407,7 +407,9 @@ a img:focus {
 
 .theater-show {
     padding-bottom: 80px;
-
+}
+.theater-show .container {
+    min-width: 0;
 }
 
 .show-title {
@@ -451,6 +453,7 @@ a img:focus {
 .show-slide:hover .search-img{
     opacity: 100;
     transition: 0.3s;
+    filter: none;
 }
 .show-slide:focus .show-slide-title,
 .show-slide:hover .show-slide-title,
@@ -508,7 +511,7 @@ a img:focus {
 
 
 .big-logo {
-    
+
 }
 
 .big-logo .container {
@@ -827,7 +830,6 @@ a img:focus {
 
 
 @media (max-width:450px) {
-
     
     .big-logo .container {
         max-width: 100%;
