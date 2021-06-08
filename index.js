@@ -24,6 +24,26 @@ const bigTheaterSlider =new Swiper('.big-theater-slider-container', {
     speed: 1000,
 })
 
+const showSlider = new Swiper('.show-container', {
+    loop: true,
+    loopedSlides: 4,
+    grabCursor: true,
+    slideToClickedSlide: true,
+    slidesPerGroup: 1,
+    slidesPerView: 'auto',
+
+    autoplay: {
+        speed: 500
+      },
+    
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+})
+
+
+
 const openBurger = document.querySelector('.header-burger')
 const mobMenu = document.querySelector('.header-menu')
 const closeBurger=document.querySelector('.close')
