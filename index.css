@@ -30,6 +30,23 @@ li {
 }
 input::placeholder {
     color: #989898;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    /* line-height: 150%; */
+}
+textarea::placeholder {
+    color: #989898;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    line-height: 150%;
+}
+input:active, input:hover, input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+textarea:active, textarea:hover, textarea:focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
 .container {
@@ -86,7 +103,6 @@ input::placeholder {
 a img:hover,
 a img:focus {
     filter: invert(0.4) sepia(1) saturate(8.3) hue-rotate(360deg) brightness(1.2);
-
 }
 
 
@@ -104,31 +120,50 @@ a img:focus {
 
 .header-menu {
     display: none;
+    /* overflow: visible; */
+}
+.header menu::-webkit-scrollbar {
+    display: none;
 }
 
 
- .show {
-    display: flex;
-    flex-direction: column-reverse;
+.show {
+    /* display: flex;
+    flex-direction: column-reverse; */
 
+    display: block;
 
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
+
+    min-height: 100vh;
+    max-height: 100vh;
+
     width: 300px;
     background: #333333;
-    z-index: 10;
 
-    padding-top: 140px;
-
-    overflow-y: scroll;
-    overflow-x: scroll;
+    overflow: scroll;
 }
+
+.show::-webkit-scrollbar {
+    display: none;
+}
+.phone::-webkit-scrollbar {
+    display: none;
+}
+
+
 .show ul {
+    padding-top: 140px;
     padding-left: 39px;
 }
 .show .header-logo {
-    margin: 89px auto 140px;
+    padding-bottom: 140px;
+
+
+    /* margin: 89px auto 140px; */
+    margin: 89px auto 0px;
     display: flex;
     flex-wrap: wrap;
     width: 140px;
@@ -169,16 +204,19 @@ a img:focus {
 
     letter-spacing: 0.05em;
     text-transform: uppercase;
+}
+.show li a:hover,
+.show li a:focus {
+    color: #D1A954;
 } 
-
-
-.show-burger .close {
+.show .close {
     display: flex;
     position: absolute;
     top: 38px;
     left: 246px;
     z-index: 11;
 }
+
 
 
 .phone {
@@ -397,6 +435,8 @@ a img:focus {
     width: 100%;
     background-color: #FFFFFF;
 }
+
+
 .big-logo {
 
     background-image: url(img/second-img.png);
@@ -410,7 +450,6 @@ a img:focus {
 .big-logo .container {
 
 }
-
 .big-logo-wrapper {
     margin: 0 auto;
 
@@ -422,7 +461,6 @@ a img:focus {
     flex-direction: row;
     justify-content: center;
 }
-
 .logo-numbers {
     padding-right: 24px;
     
@@ -431,7 +469,6 @@ a img:focus {
     align-items: center;
     justify-content: space-between;
 }
-
 .year {
     font-family: 'Open Sans Condensed';
     font-style: normal;
@@ -444,8 +481,6 @@ a img:focus {
     color: #D1A954;
 }
 .logo-text {
-
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -464,7 +499,6 @@ a img:focus {
     width: 22px;
     height: 24px;
 }
-
 .stars-text {
     padding-top: 25px;
 
@@ -476,9 +510,10 @@ a img:focus {
     font-size: 25px;
     line-height: 150%;
 }
+
+
 .partners {
 }
-
 .partners .container {
     display: flex;
     flex-direction: column;
@@ -518,6 +553,8 @@ a img:focus {
 .logo img {
     padding-bottom: 80px;
 }
+
+
 .patron {
 }
 .patron-title {
@@ -535,9 +572,6 @@ a img:focus {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
-
-
-
 .patron-title span {
     color: #D1A954;
 }
@@ -546,6 +580,8 @@ a img:focus {
     flex-direction: column;
     width: 100%;
 }
+
+
 
 .form {
     padding-bottom: 50px;
@@ -575,7 +611,8 @@ a img:focus {
     justify-content: space-between;
 }
 
-.form input {
+.form input,
+.form textarea {
     width: 47%;
     min-height: 35px;
 
@@ -583,18 +620,26 @@ a img:focus {
     border: 1px solid #616161;
     box-sizing: border-box;
     padding-left: 15px;
+
+    color: #989898;
+
+    /* padding-top: 6px; */
 }
 .form-2 {
     width: 100%;
 }
-
-.form-2 input {
+.form-2 textarea {
     width: 100%;
     min-height: 100px;
 }
-.form-2 input::placeholder{
-    top: 10px;
-    position: absolute;
+.form-2 textarea {
+    color: #989898;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 150%;
+
+    padding-top: 6px;
 }
 
 
@@ -703,7 +748,10 @@ a img:focus {
 .footer-right a {
     color: #989898;
 }
-
+/* .header-menu {
+    display: none;
+    overflow: visible;
+} */
 
 
 @media (max-width:450px) {

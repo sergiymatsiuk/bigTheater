@@ -26,14 +26,21 @@ const bigTheaterSlider =new Swiper('.big-theater-slider-container', {
 
 const openBurger = document.querySelector('.header-burger')
 const mobMenu = document.querySelector('.header-menu')
+const closeBurger=document.querySelector('.close')
 
 openBurger.addEventListener('click', (e) => {
     e.preventDefault()
 
     mobMenu.classList.toggle('show')
-    openBurger.classList.toggle('show-burger')
     document.body.classList.toggle('no-scroll')
 })
+closeBurger.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    mobMenu.classList.toggle('show')
+    document.body.classList.toggle('no-scroll')
+})
+
 
 window.addEventListener('resize', () => {
 
