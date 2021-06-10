@@ -531,6 +531,7 @@ a img:focus {
     padding-top: 126px;
     padding-bottom: 126px;
 
+
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -538,6 +539,7 @@ a img:focus {
 }
 .logo-numbers {
     padding-right: 24px;
+    padding-left: 24px;
     
     display: flex;
     flex-direction: column;
