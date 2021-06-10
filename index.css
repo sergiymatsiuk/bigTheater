@@ -511,7 +511,6 @@ a img:focus {
 
 
 .big-logo {
-
 }
 
 .big-logo .container {
@@ -832,7 +831,18 @@ a img:focus {
 
 
 @media (max-width:450px) {
-    
+    .show-slide {
+        width: 280px;
+    }
+    .show-slide .main-img {
+        width: 100%;
+    }
+    .search-img {
+        top: 130px;
+        left: 90px;
+    }
+
+
     .big-logo .container {
         max-width: 100%;
     }
@@ -1254,5 +1264,4 @@ a img:focus {
     }
 
 }
-
 
